@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install soap \
     && docker-php-ext-install sockets \
+    && docker-php-ext-install zip \
     && rm -rf /var/lib/apt/lists/*
 
 COPY config/php.ini /usr/local/etc/php/php.ini
